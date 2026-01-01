@@ -6,8 +6,8 @@ import { buttonVariants } from '../ui/button';
 import { Button } from '../ui/button';
 
 const navBar = [
-    {id: 'About', link: '/app/about', title: 'About'},
-    {id: "Contact", link: "/app/contact", title: "Contact us"}
+    {id: 'About', link: '/about', title: 'About'},
+    {id: "Contact", link: "/contact", title: "Contact us"}
 ];
 
 export  function Navbar() {
@@ -58,9 +58,9 @@ export  function Navbar() {
           </div>
 
           {/* Sign Up Button */}
-          <Button variant={'destructive'}
-            onClick={() => router.push('/app/signup')}
-            className=''>
+          <Button variant={'outline'}
+            onClick={() => router.push('/auth/signup')}
+            className='cursor-pointer'>
             Sign Up
           </Button>
          

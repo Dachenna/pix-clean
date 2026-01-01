@@ -31,7 +31,7 @@ export default function LandingPage() {
               <Button variant="outline" 
                 size="lg" 
                 className="text-lg px-8"
-                onClick={() => router.push("/app/signup")}
+                onClick={() => router.push("/auth/signup")}
               >
                 Learn More
               </Button>
@@ -103,7 +103,7 @@ export default function LandingPage() {
             <Button size="lg" 
               variant="secondary" 
               className="text-lg px-8"
-              onClick={() => router.push("/app/signup")}
+              onClick={() => router.push("/auth/signup")}
             >
               Get Started Free
               <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
