@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { buttonVariants } from '../ui/button';
+import { Button } from '../ui/button';
 
 const navBar = [
     {id: 'About', link: '/app/about', title: 'About'},
@@ -57,9 +58,11 @@ export  function Navbar() {
           </div>
 
           {/* Sign Up Button */}
-          <Link href="/login" className={buttonVariants()}>
-              Sign Up
-          </Link>
+          <Button variant={'destructive'}
+            onClick={() => router.push('/app/signup')}
+            className=''>
+            Sign Up
+          </Button>
          
             
         </div>

@@ -28,7 +28,11 @@ export default function LandingPage() {
                 Start Removing
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" 
+                size="lg" 
+                className="text-lg px-8"
+                onClick={() => router.push("/app/signup")}
+              >
                 Learn More
               </Button>
             </div>
