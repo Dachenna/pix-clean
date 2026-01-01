@@ -2,10 +2,11 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { buttonVariants } from '../ui/button';
 
 const navBar = [
-    {id: 'Pricing', link: '/pricing', title: 'Pricing'},
-    {id: "Contact", link: "/contact", title: "Contact us"}
+    {id: 'About', link: '/app/about', title: 'About'},
+    {id: "Contact", link: "/app/contact", title: "Contact us"}
 ];
 
 export  function Navbar() {
@@ -44,28 +45,23 @@ export  function Navbar() {
             <ul className="flex items-center space-x-8">
               {navBar.map((item) => (
                 <li key={item.id}>
-                  <a 
+                  <Link 
                     href={item.link} 
-                    className="text-sm font-medium text-gray-700 hover:text-blue-600 
-                    dark:text-gray-200 dark:hover:text-blue-400 transition-colors duration-200"
+                    className={buttonVariants({ variant: 'secondary' })}
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Sign Up Button */}
-          <button 
-            onClick={() => router.push('/login')}
-            className="bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 
-            hover:to-blue-800 text-white text-sm font-semibold px-5 py-2 rounded-lg 
-            shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all 
-            duration-200"
-          >
-            Sign Up
-          </button>
+          <Link href="/login" className={buttonVariants()}>
+              Sign Up
+          </Link>
+         
+            
         </div>
       </div>
     </nav>
