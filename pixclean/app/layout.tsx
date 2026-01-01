@@ -16,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "pixclean - AI Background Remover",
-  description: "A web application that specilizes in removing backgrounds from images using AI technology.",
+  title: "PixClean - Free AI Background Remover | Remove Image Backgrounds Instantly",
+  description: "PixClean uses advanced AI to remove backgrounds from images instantly and effortlessly. Perfect for e-commerce, social media, and professional graphics. No technical skills needed—upload, remove, and download in seconds.",
 };
 
 export default function RootLayout({

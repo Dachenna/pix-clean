@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Upload, Zap } from "lucide-react";
+import { useRouter } from "next/router";
 
 export default function LandingPage() {
+  const router = useRouter();
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-linear-to-br from-orange-50 to-white dark:from-gray-900 dark:to-gray-800">
+
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Remove Backgrounds with{" "}
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 AI Power
               </span>
             </h1>
@@ -84,7 +87,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-r from-orange-400 to-orange-600">
+        <section className="py-24 bg-linear-to-r from-orange-400 to-orange-600">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Clean Your Images?
@@ -92,9 +95,13 @@ export default function LandingPage() {
             <p className="text-xl text-orange-100 mb-8">
               Join thousands of users who trust PixClean for their background removal needs
             </p>
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <Button size="lg" 
+              variant="secondary" 
+              className="text-lg px-8"
+              onClick={() => router.push("/app/signup")}
+            >
               Get Started Free
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
             </Button>
           </div>
         </section>
