@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export default function LoginPage() {
   return (
@@ -44,9 +45,9 @@ export default function LoginPage() {
         <div className="text-center">
           <p className="text-gray-600 dark:text-gray-300">
             Don't have an account?{" "}
-            <a href="#" className="text-orange-600 hover:text-orange-500">
+            <Link href="/auth/signup" className="text-orange-600 hover:text-orange-500">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </div>

@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { buttonVariants } from '../ui/button';
-import { Button } from '../ui/button';
+import { ThemeToggle } from '../web/theme-toggle';
+import { Sign } from 'crypto';
 
 const navBar = [
     {id: 'About', link: '/about', title: 'About'},
@@ -57,16 +58,15 @@ export  function Navbar() {
             </ul>
           </div>
 
-          {/* Sign Up Button */}
-          <Button variant={'outline'}
-            onClick={() => router.push('/auth/signup')}
-            className='cursor-pointer'>
-            Sign Up
-          </Button>
-         
-            
+          {/* Actions */}
+          <div className="flex items-center space-x-2">
+              <Link href="/auth/signup" className={buttonVariants({ variant: 'outline' })}>
+                Sign Up
+              </Link>
+              <ThemeToggle />
+          </div>
         </div>
-      </div>
+        </div>
     </nav>
   )
 }
